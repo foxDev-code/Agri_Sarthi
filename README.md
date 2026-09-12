@@ -1,10 +1,45 @@
 ﻿# AgriSarthi — Crop Awareness and Early-Detection Concept
 
-> 🌐 **Live Website:** [https://agri-sarthi-lovat.vercel.app](https://agri-sarthi-lovat.vercel.app)
+> 🌐 **Live Website:** [https://agri-sarthi-lovat.vercel.app](https://agri-sarthi-lovat.vercel.app)  
+> 📹 **Demo Video:** [Watch Full HD Video (MP4)](https://github.com/foxDev-code/Agri_Sarthi/raw/main/docs/assets/agrisarthi-demo.mp4)
 
-A crop-protection project presented in the AgriSarthi botanical website.
-The original scenery, fonts, colors, ten-scene layout, live particle globe
-and reversible 57-second scroll choreography are retained.
+A crop-protection platform and botanical web experience exploring edge-AI early crop awareness, pest and disease loss evidence, and guided local scouting.
+
+---
+
+## 🎬 Video Demonstration
+
+https://github.com/user-attachments/assets/demo
+
+<div align="center">
+  <video src="https://github.com/foxDev-code/Agri_Sarthi/raw/main/docs/assets/agrisarthi-demo.mp4" controls="controls" muted="muted" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.5);">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<p align="center">
+  <a href="https://github.com/foxDev-code/Agri_Sarthi/raw/main/docs/assets/agrisarthi-demo.mp4">
+    <img src="docs/assets/demo-preview.gif" alt="AgriSarthi Live Walkthrough Preview" width="100%" style="border-radius: 8px;" />
+  </a>
+  <br>
+  <em>▶️ <b>Click the preview above to view or download the full 1080p demo video directly.</b></em>
+</p>
+
+---
+
+## 📸 Interface Snips & Showcase
+
+<p align="center">
+  <img src="docs/assets/hero-preview.png" alt="AgriSarthi Hero Section" width="100%" style="border-radius: 8px; margin-bottom: 16px;" />
+  <br>
+  <em>Hero Section — Early detection and crop protection awareness with real-time particle globe</em>
+</p>
+
+<p align="center">
+  <img src="docs/assets/evolves-preview.png" alt="AgriSarthi Evolving Platform" width="100%" style="border-radius: 8px;" />
+  <br>
+  <em>AgriSarthi Platform Evolution — Designed around field realities and crop context</em>
+</p>
 
 ---
 
@@ -12,20 +47,21 @@ and reversible 57-second scroll choreography are retained.
 
 - **Production URL:** [https://agri-sarthi-lovat.vercel.app](https://agri-sarthi-lovat.vercel.app)
 - **Deployment Platform:** Vercel (Vite preset)
+- **Status:** Continuous deployment on `main` branch
 
 ---
 
-## Run Locally on Windows, macOS or Linux
+## 💻 Run Locally
 
 Install a compatible Node.js runtime (Node 22.12+ in the 22 release line).
-From this folder run:
+
+From this directory run:
 
 ```sh
 node preview.mjs
 ```
 
-Open `http://127.0.0.1:4173`. Windows users can also double-click `START-PREVIEW.cmd`. The included dist folder needs no npm install to preview.
-Keep the terminal running. See `SETUP-GUIDE.md` for setup details.
+Open `http://127.0.0.1:4173` (Windows users can also double-click `START-PREVIEW.cmd`).
 
 To develop and rebuild:
 
@@ -35,28 +71,19 @@ npm run dev
 npm run build
 ```
 
-## Content and Evidence
+---
 
-The hero and About scene introduce recurring crop losses and earlier observation. Three floating cards show rice 37.4%, wheat 28.2%, maize 31.2% and soybean 26.3%. The former pricing cards now show the reported tea-sector losses of 147 million kg and Rs 2,865 crore annually.
+## 🌾 Content and Evidence
 
-Open Evidence in the navigation for every supplied project figure, scope, source links and uncertainty notes. `src/crop-evidence.js` contains that content. Figures describe different years, populations and causes, so they must not be added together. Unverified claims are retained as labeled project context: the approximately 30% government attribution, vegetable 46–100% / 5–90% ranges, disease-only 15–25% across 140+ million hectares, and the claimed 30–60% regional trial reduction.
+The hero and About scenes introduce recurring crop losses and earlier observation. Floating cards detail crop loss evidence: rice 37.4%, wheat 28.2%, maize 31.2%, and soybean 26.3%. Additional cards show reported tea-sector losses of 147 million kg and ₹2,865 crore annually.
 
-This is an edge-AI product concept, not a deployed diagnostic model. No crop-loss reduction, detection accuracy or automated diagnosis is claimed.
+Open **Evidence** in the navigation for every supplied project figure, scope, source links and uncertainty notes. `src/crop-evidence.js` contains that content.
 
-## Working Interactions
+---
 
-- Crop profile and local field workspace.
-- Guided scouting checklist.
-- Dated observation notes saved in this browser, with text-file download.
-- Prepared early-detection workflow explanations.
-- Expandable source and evidence notes, including all supplied figures.
-- Downloadable contact-message drafts; locally saved newsletter interest.
-- Privacy dialog for clearing local preferences and observations.
-- Chapter navigation, forward/reverse scrolling and Play/Pause tour.
+## 🛠️ Working Interactions
 
-Manual scroll/touch/navigation interrupts the tour. Desktop cinematic mode uses widths >=601px and heights >=560px. Smaller viewports use stacked sections; reduced motion uses a static layout. No accounts, email delivery, live monitoring, payments or trained AI inference are connected.
-
-## Design and Technical Notes
-
-Vite, semantic HTML/CSS/JavaScript, GSAP and Three.js. Assets and fonts are local; the supplied production build can be viewed without internet.
-Original visual provenance and animation comparison are documented in `ASSET-PROMPTS.md` and `REFERENCE-AUDIT.md`. These describe the original video reconstruction. `CROP-CONTENT-AUDIT.md` covers the current adaptation. `AGENT-PROMPT.txt` provides reusable reconstruction guidance and a current crop-content overlay.
+- **Crop profile & field workspace**: Interactive notebook and guided scouting checklist.
+- **Local observation notes**: Saved locally in the browser with text file download support.
+- **Interactive choreography**: 10 distinct scenes with interactive tour controls and 3D globe animation.
+- **Privacy & local control**: Clear local storage and preferences anytime via the built-in privacy dialog.
