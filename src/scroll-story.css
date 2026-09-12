@@ -1,0 +1,942 @@
+.cinematic-scroll {
+  scroll-behavior: auto;
+  scroll-padding-top: 0;
+  overflow-anchor: none;
+}
+.story-track {
+  position: relative;
+}
+.forest-bridge {
+  position: absolute;
+  inset: 0;
+  background: url("/assets/canopy.webp") center / cover;
+  pointer-events: none;
+  z-index: 15;
+  will-change: transform, opacity;
+  mask-image: radial-gradient(ellipse, #000 48%, transparent 73%);
+}
+.story-stage .about-landscape {
+  background-image:
+    linear-gradient(#07100666, #17271222 45%, #030603b3),
+    url("/assets/about-branches.webp");
+  filter: brightness(1);
+}
+.story-stage .about,
+.story-stage .engine {
+  background: #030603;
+}
+.story-stage .mini-graph {
+  white-space: nowrap;
+  letter-spacing: 0.3vh;
+  font-size: 3.2vh;
+}
+.story-stage {
+  height: 100svh;
+  width: 100%;
+  position: relative;
+  overflow: clip;
+  isolation: isolate;
+  background: #030603;
+  perspective: 1400px;
+}
+.story-stage .story-scene {
+  position: absolute !important;
+  inset: 0 !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transform-style: preserve-3d;
+}
+.story-stage .is-current-scene {
+  pointer-events: auto;
+}
+.story-stage .story-scene .reveal {
+  visibility: visible;
+}
+.story-stage .landscape,
+.story-stage .prediction-tree,
+.story-stage .evolve-stone,
+.story-stage .footer-landscape {
+  will-change: transform;
+  backface-visibility: hidden;
+}
+.story-stage .section-heading h2 {
+  font-size: clamp(44px, 6.9vh, 76px);
+}
+.story-stage .section-heading > .eyebrow {
+  margin-bottom: 2vh;
+}
+.story-stage .section-heading > p:not(.eyebrow) {
+  margin-top: 2vh;
+  font-size: clamp(11px, 1.55vh, 15px);
+  line-height: 1.6;
+}
+.story-stage .hero-copy {
+  padding-top: 16.5vh;
+}
+.story-stage .hero-copy h1 {
+  font-size: clamp(44px, 7.4vh, 86px);
+}
+.story-stage .hero-copy .eyebrow {
+  font-size: clamp(8px, 1.25vh, 11px);
+  margin-bottom: 2vh;
+}
+.story-stage .hero-copy .button {
+  margin-top: 2.5vh;
+}
+.story-stage .hero-product {
+  top: 49.5%;
+  width: 31vh;
+  height: 40vh;
+  max-width: 330px;
+  max-height: 415px;
+  margin-left: 0;
+  transform: translateX(-50%);
+}
+.story-stage .hero-bottom {
+  bottom: 4vh;
+}
+.story-stage .hero-bottom > div {
+  max-width: 29vw;
+}
+.story-stage .hero-bottom p {
+  font-size: clamp(9px, 1.4vh, 13px);
+}
+.story-stage .floating-note {
+  left: -13vh;
+  top: 4vh;
+  width: 24vh;
+  max-width: 220px;
+}
+.story-stage .floating-grade {
+  right: -13vh;
+  bottom: 7vh;
+  width: 22vh;
+  max-width: 200px;
+}
+.story-stage .about .section-heading {
+  margin: 0 auto;
+}
+.story-stage .about-caption {
+  bottom: 12%;
+}
+.story-stage .predictions {
+  padding: 13vh 6% 6vh;
+}
+.story-stage .prediction-grid {
+  margin-top: 4vh;
+  max-width: 1140px;
+  width: min(85%, 125vh);
+  gap: 2.4vh;
+  perspective: 1400px;
+}
+.story-stage .prediction-card {
+  min-height: 0;
+  height: 49vh;
+  max-height: 470px;
+  padding: 2.7vh 2.3vh 2.5vh;
+  border-radius: 2.6vh;
+  will-change: transform, opacity;
+}
+.story-stage .metric-panel {
+  min-height: 0;
+  height: 28vh;
+  padding: 2.5vh 2vh;
+  border-radius: 2.4vh;
+}
+.story-stage .metric-panel > strong {
+  font-size: 6.8vh;
+}
+.story-stage .metric-panel > span,
+.story-stage .metric-top {
+  font-size: 1.25vh;
+}
+.story-stage .metric-panel > small {
+  font-size: 1.05vh;
+}
+.story-stage .bar-chart {
+  height: 8.6vh;
+  gap: 1.8vh;
+  margin-top: 2vh;
+}
+.story-stage .card-description {
+  padding-top: 2vh;
+}
+.story-stage .card-description h3 {
+  font-size: 3.4vh;
+  margin-bottom: 1vh;
+}
+.story-stage .card-description p {
+  font-size: 1.3vh;
+}
+.story-stage .white-panel {
+  margin-top: 4vh;
+  margin-left: 3vh;
+  height: 25vh;
+  padding: 2vh;
+}
+.story-stage .white-panel .line-chart {
+  height: 7vh;
+}
+.story-stage .focus-pill {
+  width: 13.8vh;
+  top: 2vh;
+  left: 1.5vh;
+  padding: 1.2vh;
+}
+.story-stage .focus-pill strong {
+  font-size: 2.7vh;
+}
+.story-stage .focus-pill small {
+  font-size: 0.95vh;
+}
+.story-stage .stability-list {
+  font-size: 1.1vh;
+  gap: 1.7vh;
+  margin-top: 2.1vh;
+}
+.story-stage .oracle {
+  padding: 13.5vh 5% 0;
+}
+.story-stage .oracle-copy {
+  position: absolute;
+  top: 75%;
+  left: 0;
+  width: 100%;
+  margin: 0;
+}
+.story-stage .oracle-copy p {
+  font-size: 1.4vh;
+  margin-bottom: 2vh;
+}
+.story-stage .orb-coordinate {
+  bottom: 4vh;
+}
+.story-stage .story-orb {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  margin: 0;
+  z-index: 20;
+  pointer-events: none;
+}
+.story-stage .orb-fallback {
+  width: 30vh;
+  height: 30vh;
+  top: 56%;
+}
+.story-stage .dashboard {
+  padding: 14vh 5% 0;
+}
+.story-stage .dashboard-preview {
+  display: none;
+}
+.story-stage .satellite-card {
+  width: 23vh;
+  min-height: 25vh;
+  padding: 2.6vh;
+  top: auto;
+  bottom: auto;
+}
+.story-stage .satellite-left {
+  left: 9%;
+  top: 56%;
+}
+.story-stage .satellite-right {
+  right: 9%;
+  top: 34%;
+}
+.story-stage .satellite-card svg {
+  width: 3vh;
+  height: 3vh;
+  margin-bottom: 6vh;
+}
+.story-stage .satellite-card h3 {
+  font-size: 2.9vh;
+}
+.story-stage .satellite-card p {
+  font-size: 1.3vh;
+}
+.story-stage .mini-graph {
+  font-size: 3.2vh;
+  margin-bottom: 5vh;
+}
+.story-stage .engine {
+  padding: 17vh 5% 0;
+}
+.story-stage .engine-grid {
+  max-width: 85vh;
+  margin-top: 4.2vh;
+  gap: 1.5vh;
+  perspective: 1300px;
+}
+.story-stage .engine-card {
+  min-height: 0;
+  height: 32vh;
+  padding: 2.3vh 2.8vh;
+}
+.story-stage .arc,
+.story-stage .study-cycle {
+  height: 15vh;
+  margin-bottom: 1.5vh;
+}
+.story-stage .study-cycle {
+  width: 18vh;
+}
+.story-stage .engine-card h3 {
+  font-size: 3.3vh;
+}
+.story-stage .engine-card p {
+  font-size: 1.3vh;
+}
+.story-stage .evolve {
+  padding: 11vh 4%;
+}
+.story-stage .evolve-title {
+  font-size: 17vw;
+  width: max-content;
+  will-change: transform;
+}
+.story-stage .evolve-copy {
+  top: 48%;
+  left: 9%;
+}
+.story-stage .individual .section-heading {
+  padding-inline: 3%;
+  max-width: 1100px;
+}
+.story-stage .individual .section-heading h2 {
+  font-size: 7vh;
+}
+.story-stage .pricing {
+  padding: 10vh 5% 0;
+}
+.story-stage .pricing .section-heading h2 {
+  font-size: 5.5vh;
+}
+.story-stage .pricing .section-heading .eyebrow {
+  margin-bottom: 1.2vh;
+}
+.story-stage .billing-toggle {
+  margin-top: 2vh;
+}
+.story-stage .billing-toggle button {
+  padding: 1.3vh 1.8vh;
+  font-size: 1.3vh;
+}
+.story-stage .pricing-grid {
+  max-width: 82vh;
+  margin-top: 3vh;
+  gap: 2.5vh;
+  perspective: 1300px;
+}
+.story-stage .price-card {
+  padding: 2.5vh 3vh;
+}
+.story-stage .plan-label {
+  font-size: 1.05vh;
+  margin-bottom: 1.7vh;
+}
+.story-stage .price-card h3 {
+  font-size: 3vh;
+  margin-bottom: 2vh;
+}
+.story-stage .price > strong {
+  font-size: 6.5vh;
+}
+.story-stage .price small,
+.story-stage .billing-note {
+  font-size: 1.15vh;
+}
+.story-stage .price-card ul {
+  font-size: 1.25vh;
+  padding: 2.2vh 0 1vh;
+  margin-top: 2vh;
+}
+.story-stage .price-card li {
+  margin-bottom: 1.8vh;
+}
+.story-stage .price-card .button {
+  font-size: 1.3vh;
+  min-height: 4.7vh;
+  padding: 1.2vh;
+}
+.story-stage .pricing-footnote {
+  font-size: 1.15vh;
+  margin-top: 2vh;
+}
+.story-stage .site-footer {
+  padding: 0 3% 3vh;
+}
+.story-stage .footer-landscape {
+  inset: 0;
+  background-position: center 42%;
+  background-size: cover;
+}
+.story-stage .footer-panel {
+  position: absolute;
+  left: 3%;
+  right: 3%;
+  bottom: 4vh;
+  padding: 3.7vh 4vh 2vh;
+  gap: 2vh 5vh;
+  border-radius: 3vh;
+  max-width: none;
+  grid-template-columns: 1.4fr 0.7fr 1fr;
+}
+.story-stage .footer-intro .logo {
+  margin-bottom: 3vh;
+  font-size: 3vh;
+}
+.story-stage .footer-intro h2 {
+  font-size: 5vh;
+}
+.story-stage .footer-intro p {
+  font-size: 1.2vh;
+  margin: 1.5vh 0 2vh;
+}
+.story-stage .footer-links {
+  padding-top: 8vh;
+  gap: 2vh;
+  font-size: 1.4vh;
+}
+.story-stage .footer-news {
+  padding-top: 8vh;
+  grid-column: auto;
+}
+.story-stage .footer-bottom {
+  font-size: 1vh;
+  padding-top: 1.5vh;
+  margin-top: 1vh;
+}
+.story-stage .footer-intro .button {
+  font-size: 1.3vh;
+  min-height: 4.5vh;
+  padding: 1vh 1.4vh;
+}
+.story-controls {
+  position: fixed;
+  z-index: 22;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding: 8px 13px;
+  background: #071006b0;
+  border: 1px solid #c0d1ab25;
+  border-radius: 25px;
+  backdrop-filter: blur(14px);
+  font-size: 9px;
+  color: #c2ceb3;
+}
+.tour-toggle {
+  background: none;
+  padding: 4px 2px;
+  color: #e8eedf;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+  min-width: 75px;
+}
+.chapter-label {
+  font-size: 8px;
+  min-width: 113px;
+  text-transform: uppercase;
+  letter-spacing: 0.045em;
+}
+.chapter-dots {
+  display: flex;
+  gap: 2px;
+}
+.chapter-dots button {
+  display: grid;
+  place-items: center;
+  background: none;
+  width: 17px;
+  height: 22px;
+  padding: 0;
+}
+.chapter-dots span {
+  height: 4px;
+  width: 4px;
+  display: block;
+  border-radius: 50%;
+  background: #b7c9a552;
+  transition:
+    background-color 150ms ease,
+    transform 150ms var(--ease-out);
+}
+.chapter-dots [aria-current] span {
+  background: #d8ecae;
+  transform: scale(1.5);
+}
+@media (max-width: 1000px) {
+  .story-controls {
+    gap: 10px;
+  }
+  .chapter-label {
+    display: none;
+  }
+  .story-stage .hero-bottom > div {
+    max-width: 25vw;
+  }
+  .story-stage .hero-product {
+    width: 29vh;
+  }
+  .story-stage .floating-note {
+    font-size: 12px;
+  }
+  .story-stage .footer-news {
+    max-width: 230px;
+  }
+  .story-stage .footer-links {
+    padding-left: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .story-controls {
+    display: none;
+  }
+}
+
+/* Reference refinements: separate scenery layers and measured scene framing. */
+.motion-word {
+  display: inline-block;
+}
+.about-landscape {
+  background-image: url("/assets/about-branches.webp");
+}
+.evolve-stone {
+  background-image: url("/assets/evolve-rock.webp");
+}
+.evolve-features {
+  list-style: none;
+  padding: 0;
+  color: #afb4a7;
+  font-size: 11px;
+  line-height: 1.55;
+}
+.evolve-features li {
+  margin: 12px 0;
+}
+.evolve-features li::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #c2db52;
+  margin-right: 8px;
+}
+.evolve-title .evolve-tail {
+  color: #7b7f74;
+}
+.moss-orb {
+  display: none;
+}
+.story-stage .section-heading h2 {
+  font-size: 6.1vh;
+}
+.story-stage .section-heading h2 em {
+  font-size: 1.13em;
+}
+.story-stage .about .section-heading {
+  transform: translateY(-3vh);
+}
+.story-stage .about .section-heading .button {
+  margin-top: 2.5vh;
+  font-size: 1.35vh;
+  min-height: 4.5vh;
+  padding: 1vh 1.4vh;
+}
+.story-stage .about-caption {
+  display: none;
+}
+.story-stage .about-landscape {
+  background-image:
+    linear-gradient(#0002, #0001), url("/assets/about-branches.webp");
+}
+.story-stage .predictions {
+  padding: 17vh 3% 0;
+}
+.story-stage .prediction-grid {
+  position: absolute;
+  top: 45%;
+  left: 4%;
+  width: 92%;
+  max-width: none;
+  margin: 0;
+  gap: 2vh;
+}
+.story-stage .prediction-card {
+  height: 45vh;
+  border-radius: 1.8vh;
+}
+.story-stage .metric-panel {
+  height: 27vh;
+  border-radius: 1.4vh;
+}
+.story-stage .prediction-card .card-description h3 {
+  font-size: 2.8vh;
+}
+.story-stage .card-description p {
+  font-size: 1.2vh;
+}
+.story-stage .prediction-tree {
+  background-image:
+    linear-gradient(#0005, #000a), url("/assets/about-branches.webp");
+  background-size: cover;
+}
+.story-stage .oracle {
+  padding-top: 20vh;
+}
+.story-stage .oracle-copy {
+  top: 72%;
+}
+.story-stage .orb-coordinate {
+  display: none;
+}
+.story-stage .dashboard {
+  padding-top: 30vh;
+}
+.story-stage .dashboard .section-heading h2 {
+  font-size: 5.7vh;
+}
+.story-stage .dashboard .section-heading > p:not(.eyebrow) {
+  font-size: 1.25vh;
+  max-width: 49vh;
+  margin-inline: auto;
+}
+.story-stage .helix {
+  display: none;
+}
+.story-stage .satellite-card {
+  width: 23vh;
+  min-height: 23vh;
+  height: 23vh;
+  padding: 2.2vh;
+  border-radius: 1.2vh;
+  background: linear-gradient(145deg, #8c997416, #10160a20);
+  backdrop-filter: blur(6px);
+}
+.story-stage .satellite-left {
+  top: 48%;
+  left: 8%;
+}
+.story-stage .satellite-right {
+  top: 48%;
+  right: 8%;
+}
+.story-stage .satellite-card h3 {
+  font-size: 2.1vh;
+}
+.story-stage .satellite-card p {
+  font-size: 1.1vh;
+}
+.story-stage .satellite-card svg {
+  margin-bottom: 4vh;
+}
+.story-stage .mini-graph {
+  margin-bottom: 4vh;
+}
+.story-stage .satellite-echo-left {
+  top: 48%;
+  left: -2%;
+  pointer-events: none;
+}
+.story-stage .satellite-echo-right {
+  top: 48%;
+  right: -2%;
+  pointer-events: none;
+}
+.story-stage .engine {
+  padding-top: 23vh;
+}
+.story-stage .engine-landscape {
+  background-image: url("/assets/trunk-clean.webp");
+  filter: none;
+}
+.story-stage .engine-grid {
+  max-width: 68vh;
+  margin-top: 6vh;
+  gap: 2vh;
+}
+.story-stage .engine-card {
+  height: 29vh;
+  padding: 1.8vh;
+  background: #4d56422b;
+  backdrop-filter: blur(3px);
+  border-color: #ffffff09;
+}
+.story-stage .engine-card h3 {
+  font-size: 2.4vh;
+}
+.story-stage .engine-card p {
+  font-size: 1.1vh;
+}
+.story-stage .moss-orb {
+  display: block;
+  position: absolute;
+  left: calc(50% - 5vh);
+  top: calc(48% - 5vh);
+  width: 10vh;
+  height: 10vh;
+  border-radius: 50%;
+  background: url("/assets/trunk.webp") 29.6% 24.9% / 796% 530%;
+  box-shadow:
+    inset -1vh -1vh 2vh #14220255,
+    0 0 3vh #a2b65019;
+  pointer-events: none;
+  will-change: transform;
+  z-index: 3;
+}
+.story-stage .evolve {
+  background: #020302;
+  padding: 12vh 0 0;
+}
+.story-stage .evolve-stone {
+  inset: 0;
+  mask-image: none;
+  background: url("/assets/evolve-rock.webp") center / cover;
+}
+.story-stage .evolve-title {
+  font-size: 17vw;
+  letter-spacing: -0.07em;
+}
+.story-stage .evolve-copy {
+  top: 48%;
+  left: 9%;
+  max-width: 39vw;
+}
+.story-stage .evolve-copy h3 {
+  font-size: 4.8vh;
+}
+.story-stage .evolve-copy > p:not(.eyebrow) {
+  font-size: 1.4vh;
+  max-width: 45vh;
+  margin: 2vh 0;
+}
+.story-stage .evolve-features {
+  font-size: 1.15vh;
+}
+.story-stage .evolve-features li {
+  margin: 1.4vh 0;
+}
+.story-stage .evolve-copy > .button {
+  display: none;
+}
+.story-canopy {
+  position: absolute;
+  inset: 0;
+  background: url("/assets/canopy.webp") center / cover;
+  pointer-events: none;
+  z-index: 7;
+  will-change: transform;
+}
+.story-stage .individual,
+.story-stage .pricing {
+  background: transparent;
+}
+.story-stage .canopy,
+.story-stage .pricing-canopy {
+  display: none;
+}
+.story-stage .individual .section-heading {
+  max-width: 78vh;
+}
+.story-stage .individual .section-heading h2 {
+  font-size: 5.8vh;
+}
+.story-stage .individual .section-heading p:not(.eyebrow) {
+  font-size: 1.3vh;
+}
+.story-stage .individual .button-row {
+  margin-top: 2vh;
+}
+.story-stage .individual .button {
+  font-size: 1.3vh;
+  min-height: 4.4vh;
+  padding: 1vh 1.4vh;
+}
+.story-stage .individual .text-link {
+  font-size: 1.3vh;
+}
+.story-stage .pricing .section-heading > h2,
+.story-stage .pricing .section-heading > .eyebrow {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.story-stage .pricing-grid {
+  position: absolute;
+  left: 50%;
+  top: 31%;
+  transform: translateX(-50%);
+  width: 55%;
+  max-width: 70vh;
+  margin: 0;
+  gap: 2vh;
+}
+.story-stage .price-card {
+  min-height: 40vh;
+  padding: 2.5vh;
+  background: linear-gradient(155deg, #151912df, #0c100cba);
+  border-radius: 2vh;
+}
+.story-stage .price-card h3,
+.story-stage .price-card .popular {
+  display: none;
+}
+.story-stage .plan-label {
+  font-family: var(--serif);
+  text-transform: none;
+  font-size: 1.7vh;
+  letter-spacing: 0;
+}
+.story-stage .price {
+  align-items: baseline;
+}
+.story-stage .price > strong {
+  font-family: var(--serif);
+  font-size: 6vh;
+  font-weight: 400;
+}
+.story-stage .price-card ul {
+  margin-top: 1.5vh;
+  padding-top: 1.3vh;
+  font-size: 1.15vh;
+}
+.story-stage .price-card li {
+  margin-bottom: 1.6vh;
+}
+.story-stage .price-card .button {
+  width: auto;
+  padding-inline: 1.3vh;
+  min-height: 3.9vh;
+}
+.story-stage .billing-toggle {
+  position: absolute;
+  top: 77%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+.story-stage .pricing-footnote {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 12%;
+}
+.story-stage .footer-panel {
+  background: linear-gradient(#91a24220, #000e 40%);
+  backdrop-filter: blur(20px);
+  border-color: #dce7c011;
+}
+.story-stage .footer-landscape {
+  background-size: cover;
+}
+.motion-review {
+  position: fixed;
+  right: 12px;
+  bottom: 72px;
+  z-index: 100;
+  width: 240px;
+  padding: 12px;
+  border: 1px solid #65714b;
+  border-radius: 10px;
+  color: #eee;
+  background: #142014f2;
+  font-size: 11px;
+}
+.motion-review label {
+  display: block;
+}
+.motion-review input {
+  width: 70px;
+  padding: 5px;
+  margin: 5px;
+  color: #fff;
+  background: #000;
+}
+.motion-review button {
+  background: #dde7bf;
+  color: #15210e;
+  padding: 6px;
+  border-radius: 4px;
+}
+.motion-review small {
+  display: block;
+  margin-top: 8px;
+}
+
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/instrument-serif-regular.ttf") format("truetype");
+}
+.story-stage .prediction-tree {
+  mask-image: linear-gradient(
+    90deg,
+    #000 0%,
+    transparent 35%,
+    transparent 63%,
+    #000 100%
+  );
+}
+.story-stage .dashboard {
+  padding-top: 24vh;
+}
+.story-stage .dashboard .section-heading h2 {
+  font-size: 6.3vh;
+}
+.story-stage .mini-graph {
+  display: block;
+  margin-bottom: 4vh;
+}
+.story-stage .mini-graph svg {
+  width: 3.2vh;
+  height: 3.2vh;
+  margin: 0;
+}
+.story-stage .engine {
+  mask-image: linear-gradient(#000 75%, transparent 100%);
+}
+.story-stage .moss-orb {
+  background-size: 880% 587%;
+  background-position: 29.7% 25.6%;
+  mask-image: radial-gradient(circle, #000 60%, transparent 72%);
+  box-shadow: none;
+}
+.story-stage .evolve-title {
+  font-size: 15vw;
+}
+.story-stage .story-canopy {
+  filter: brightness(0.65);
+}
+.story-stage .plan-label {
+  font-family: "Instrument Serif", Georgia, serif;
+  text-transform: none;
+}
+.story-stage .price > strong {
+  font-family: "Instrument Serif", Georgia, serif;
+}
+.story-stage .pricing .section-heading {
+  position: static;
+}
+.story-stage .billing-toggle {
+  top: 76%;
+}
